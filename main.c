@@ -48,7 +48,7 @@ void setTask () {
     getchar();
     fgets(taskStack[taskCount], sizeof(taskStack[taskCount]), stdin);
     taskStack[taskCount][strlen(taskStack[taskCount]) - 1] = '\n';
-    createFile ("task.txt", noteStack[noteCount]);
+    createFile ("task.txt", taskStack[taskCount]);
     taskCount++;
 }
 
