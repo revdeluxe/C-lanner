@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h>
 
 #define MAX_FILES 100
 #define MAX_FILENAME_LENGTH 50
@@ -21,7 +22,7 @@ void createFile(char *name, char *content) {
         printf("File %s created successfully.\n", name);
 
         // Write to actual file
-        FILE *fp = fopen(name, "w");
+        FILE *fp = fopen(name, "a");
         if (fp != NULL) {
             fputs(content, fp);
             fclose(fp);
@@ -79,13 +80,11 @@ void writeFile(char *name, char *content) {
     printf("File %s not found. Unable to write.\n", name);
 }
 
-int main() {
-
-    createFile("example.txt", "This is the content of example.txt.");
-    readFile("example.txt");
-    writeFile("example.txt", "This is the updated content of example.txt.");
-    readFile("example.txt");
-
-    return 0;
+bool fileExists(const char *filename) {
+    FILE *fp = fopen(filename, "r");
+    if (fp != NULL) {
+        fclose(fp);
+        return true;
+    }
+    return false;
 }
-
