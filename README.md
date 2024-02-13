@@ -3,6 +3,7 @@
 Prototype Project for  BSCS 1A
 along with my group members 
 
+- R. Villareal
 - E. Fabian
 - C. Jacinto
 - C. Ibarra
