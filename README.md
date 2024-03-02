@@ -15,3 +15,10 @@ along with my group members
   -- Basic Logic reasoning (Math and Truth cases)
 
   -- Must use C as the primary language or runtime.
+
+
+# DEPENDENCIES!!!
+
+1. libsdl2
+2. libsdl2-ttf
+3. PTMono-Regular.ttf(FONT!)
